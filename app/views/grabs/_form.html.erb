@@ -1,0 +1,11 @@
+<%= semantic_form_for @grab do |f| %>
+
+  <%= f.inputs do %>
+		<%= f.input :url, :label => false, :required => :true, :as => :text, :input_html => {  :rows => 5, :cols => 140, :placeholder => "http://www.somesite.com", :tabindex => 0 } %>
+	<% end %>
+
+	<%= f.buttons do %>
+		<%= f.commit_button "Grab Image" %>
+	<% end %>
+
+<% end %>

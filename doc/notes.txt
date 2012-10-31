@@ -1,0 +1,10 @@
+1. person logs in
+2. person enters code
+3. workers go off finding price for code
+4. update code on finding result
+
+5. csv uploaded, converted in individual records and workers process each new code
+
+
+
+http://humbuckercode.co.uk/licks/code/google-search-api-for-shopping/

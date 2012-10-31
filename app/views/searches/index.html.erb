@@ -1,0 +1,56 @@
+<%= render :partial => "form" %>
+
+<hr/>
+
+<% h "Searches" %>
+
+<table id="line_items">
+  <tr>
+		<th>Term</th>
+    <th>WayFair Init</th>
+    <th>WayFair Sale</th>
+    <th>BrookStone Init</th>
+    <th>BrookStone Sale</th>
+    <th>OverStock Init</th>
+    <th>OverStock Sale</th>
+    <th>Amazon Init</th>
+    <th>Amazon Sale</th>
+    <th>NextTag Init</th>
+    <th>NextTag Sale</th>
+    <th>ShopWiki Init</th>
+    <th>ShopWiki Sale</th>
+  </tr>
+<% if !@searches.nil? %>
+	<% for item in @searches %>
+	<tr class="<%= cycle :odd, :even %>">
+		<td><%= item.term %></td>
+
+		<td><%= link_to_if !item.wayfair_url.nil?, item.wayfair_init_price, item.wayfair_url, html_options = { :target => "_blank"} %></td>
+		<td><%= link_to_if !item.wayfair_url.nil?, item.wayfair_sale_price, item.wayfair_url, html_options = { :target => "_blank"} %></td>
+
+		<td><%= link_to_if !item.brookstone_url.nil?, item.brookstone_init_price, item.brookstone_url, html_options = { :target => "_blank"} %></td>
+		<td><%= link_to_if !item.brookstone_url.nil?, item.brookstone_sale_price, item.brookstone_url, html_options = { :target => "_blank"} %></td>
+
+		<td><%= link_to_if !item.overstock_url.nil?, item.overstock_init_price, item.overstock_url, html_options = { :target => "_blank"} %></td>
+		<td><%= link_to_if !item.overstock_url.nil?, item.overstock_sale_price, item.overstock_url, html_options = { :target => "_blank"} %></td>
+
+		<td><%= link_to_if !item.amazon_url.nil?, item.amazon_init_price, item.amazon_url, html_options = { :target => "_blank"} %></td>
+		<td><%= link_to_if !item.amazon_url.nil?, item.amazon_sale_price, item.amazon_url, html_options = { :target => "_blank"} %></td>
+
+		<td><%= link_to_if !item.nexttag_url.nil?, item.nexttag_init_price, item.nexttag_url, html_options = { :target => "_blank"} %></td>
+		<td><%= link_to_if !item.nexttag_url.nil?, item.nexttag_sale_price, item.nexttag_url, html_options = { :target => "_blank"} %></td>
+
+		<td><%= link_to_if !item.shopwiki_url.nil?, item.shopwiki_init_price, item.shopwiki_url, html_options = { :target => "_blank"} %></td>
+		<td><%= link_to_if !item.shopwiki_url.nil?, item.shopwiki_sale_price, item.shopwiki_url, html_options = { :target => "_blank"} %></td>
+
+	</tr>
+	<% end %>
+<% end %>
+</table>
+
+<nav>
+	<ul>
+		<li><%= link_to "Download", searches_path(:format => :csv), html_options = { :target => "_blank"} %></li>
+		<li><%= link_to "Delete", "/empty", :confirm => 'Are you sure?' %></li>
+	</ul>
+</nav>

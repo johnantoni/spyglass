@@ -1,0 +1,11 @@
+<p>
+  <%= link_to "Download File", grab_path(:id => @grab.id, :format => @grab.file_type)%>
+</p>
+
+<p>
+  <%= link_to image_tag(@grab.asset_path), @grab.asset_path %>
+</p>
+
+<p>
+  <%= link_to "Grab New Image", new_grab_path %>
+</p>

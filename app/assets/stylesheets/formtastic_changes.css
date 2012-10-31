@@ -1,0 +1,12 @@
+.formtastic abbr { display:none; }
+
+table th {
+	vertical-align:top;
+	font-weight:normal;
+	background-color:#FDF1D0;
+	font-size:13px;
+}
+
+table {
+	border-spacing:1;
+}

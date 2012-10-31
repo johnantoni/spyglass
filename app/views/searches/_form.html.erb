@@ -1,0 +1,9 @@
+<%= semantic_form_for @search do |f| %>
+  <%= f.inputs do %>
+		<%= f.input :term, :label => "Search Term", :input_html => {  :size => 50, :maxlength => 100, :placeholder => "classic concepts 90187125", :tabindex => 0 } %>
+  <% end %>
+	<%= f.buttons do %>
+		<%= f.commit_button "Search" %>
+	<% end %>
+  <p></p>
+<% end %>

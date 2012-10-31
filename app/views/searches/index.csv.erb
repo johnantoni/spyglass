@@ -1,0 +1,56 @@
+<%- headers = [
+	"Term", 
+	"WayFair Init",
+	"WayFair Sale",
+	"WayFair URL",
+
+	"BrookStone Init",
+	"BrookStone Sale",
+	"BrookStone URL",
+
+	"OverStock Init",
+	"OverStock Sale",
+	"OverStock URL",
+
+	"Amazon Init",
+	"Amazon Sale",
+	"Amazon URL",
+
+	"NextTag Init",
+	"NextTag Sale",
+	"NextTag URL",
+
+	"ShopWiki Init",
+	"ShopWiki Sale",
+	"ShopWiki URL"
+	] -%>
+<%= CSV.generate_line headers %>
+<%- @searches.each do |item| -%>
+<%- row = [ item.term,
+
+            item.wayfair_init_price,
+            item.wayfair_sale_price,
+            item.wayfair_url,
+
+            item.brookstone_init_price,
+            item.brookstone_sale_price,
+            item.brookstone_url,
+
+            item.overstock_init_price,
+            item.overstock_sale_price,
+            item.overstock_url,
+
+            item.amazon_init_price,
+            item.amazon_sale_price,
+            item.amazon_url,
+
+            item.nexttag_init_price,
+            item.nexttag_sale_price,
+            item.nexttag_url,
+
+            item.shopwiki_init_price,
+            item.shopwiki_sale_price,
+            item.shopwiki_url
+ ] -%>
+<%= CSV.generate_line row %>
+<%- end -%>

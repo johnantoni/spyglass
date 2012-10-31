@@ -1,0 +1,106 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require nifty
+ *= require formtastic
+ *= require formtastic_changes
+ *= require_self
+*/
+
+body {
+	background:#fff;
+}
+
+#container {
+	border:1px dotted;
+	color:#302B2F;
+	padding:30px;
+	width:80%;
+	margin:20px auto;
+}
+
+header {
+	display:inline-block;
+}
+
+header h1 {
+	font-size:1.5em;
+	margin:0;
+}
+
+section {
+	padding:20px 0;
+}
+
+footer {
+	text-align:right;
+}
+
+a {
+	color:#333;
+}
+
+.search {
+	position:relative;
+}
+
+.search .buttons {
+	top:0;
+	right:0;
+	position:absolute;
+}
+
+.grab .button, .search .button {
+	padding:0;
+}
+
+nav {
+	text-align:right;
+}
+
+nav ul {
+	list-style:none;
+	padding:0;
+}
+
+nav li {
+	display:inline;
+}
+
+.grab .submit, .search .create, nav a {
+	border:0;
+	text-decoration:none;
+	text-transform:uppercase;
+	padding:5px;
+	background-color:#ccc;
+	color:#000;
+	cursor:pointer;
+}
+
+.grab .submit:hover, .search .create:hover, nav a:hover {
+	background-color:#000;
+	color:#fff;
+}
+
+.grab {
+	position:relative;
+}
+
+.grab .buttons {
+	padding:0;
+	margin:0;
+	display:inline-block;
+	position:absolute;
+	top:0;
+	right:0;
+}
+
+.label, #search_term, #grab_url {
+  font-size: 16px;
+  padding: 5px;	
+}
+
+.label {
+	color:#666;
+}
